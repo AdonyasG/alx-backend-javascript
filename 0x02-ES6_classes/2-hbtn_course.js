@@ -1,37 +1,53 @@
 export default class HolbertonCourse {
-  /**
-   * Creates a new person.
-   * @param {String} name - course name.
-   * @param {Number} length - course length.
-   * @param {Array} student - name of students.
-   */
-  constructor(name, length, student) {
+  constructor(name, length, students) {
+    if (typeof name !== 'string') {
+      throw new TypeError('Name must be a string.');
+    }
+    if (typeof length !== 'number') {
+      throw new TypeError('Length must be a number.');
+    }
+    if (!Array.isArray(students) || !students.every((s) => typeof s === 'string')) {
+      throw new TypeError('Students must be an array of strings.');
+    }
+
     this._name = name;
     this._length = length;
-    this._student = student;
+    this._students = students.slice(); // create a copy of the array to prevent mutation
   }
 
+  // name attribute
   get name() {
     return this._name;
   }
 
-  set name(name) {
-    this._name = name;
+  set name(value) {
+    if (typeof value !== 'string') {
+      throw new TypeError('Name must be a string.');
+    }
+    this._name = value;
   }
 
+  // length attribute
   get length() {
     return this._length;
   }
 
-  set length(length) {
-    this._length = length;
+  set length(value) {
+    if (typeof value !== 'number') {
+      throw new TypeError('Length must be a number.');
+    }
+    this._length = value;
   }
 
-  get student() {
-    return this._student;
+  // students attribute
+  get students() {
+    return this._students;
   }
 
-  set student(student) {
-    this._student = student;
+  set students(value) {
+    if (!Array.isArray(value) || !value.every((s) => typeof s === 'string')) {
+      throw new TypeError('Students must be an array of strings.');
+    }
+    this._students = value.slice(); // create a copy of the array to prevent mutation
   }
 }
