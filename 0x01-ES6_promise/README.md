@@ -35,4 +35,4 @@ A *[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/G
 
 ### Author
 
-[Adonyas Getachew](https://github.com/AdonyasG)[![Adonyas Getachew](https://github.com/AdonyasG/alx-backend-javascript/blob/main/0x01-ES6_promise/github-mark.png)](https://github.com/AdonyasG)
+Adonyas Getachew <a href="https://github.com/AdonyasG)"><img src="https://github.com/AdonyasG)[![Adonyas Getachew](https://github.com/AdonyasG/alx-backend-javascript/blob/main/0x01-ES6_promise/github-mark.png" width="50"/></a>
