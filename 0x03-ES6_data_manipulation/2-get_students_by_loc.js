@@ -1,7 +1,3 @@
-import getListStudents from './0-get_list_students';
-
-export default function getStudentsByLocation() {
-  const array = getListStudents();
-  const employee = array.filter((employee) => employee.location.indexOf('San') > -1);
-  return employee;
+export default function getStudentsByLocation(students, city) {
+  return students.filter((student) => student.location === city);
 }
