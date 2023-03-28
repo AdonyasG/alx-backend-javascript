@@ -1,6 +1,8 @@
 const weakMap = new WeakMap();
 
-export default function queryAPI(endpoint) {
+export { weakMap };
+
+export function queryAPI(endpoint) {
   const { protocol, name } = endpoint;
   const key = `${protocol}_${name}`;
 
