@@ -1,4 +1,3 @@
-#!/usr/bin/node
 const read = require('readline');
 
 const res = read.createInterface({
