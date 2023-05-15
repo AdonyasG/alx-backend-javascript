@@ -1,13 +1,17 @@
-// script that read stdin and and prints stdout
-const readline = require('readline');
+// node script
+const read = require('readline');
 
-const res = readline.createInterface({
+const res = read.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
-res.question('Welcome to Holberton School, what is your name?\n', (input) => {
+console.log('Welcome to Holberton School, what is your name?');
+res.on('line', (input) => {
   console.log(`Your name is: ${input}`);
-  console.log('This important software is now closing');
   res.close();
+});
+res.on('close', () => {
+  console.log('This important software is now closing');
+  process.exit();
 });
