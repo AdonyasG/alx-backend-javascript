@@ -1,5 +1,4 @@
 #!/usr/bin/node
-const process = require('process');
 const read = require('readline');
 
 const res = read.createInterface({
