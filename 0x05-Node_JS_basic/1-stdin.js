@@ -1,22 +1,13 @@
-// node script
-const read = require('readline');
+process.stdin.on('readable', () => {
+  const name = process.stdin.read();
+  if (name !== null) {
+    const res = name.toString().trim();
+    console.log(`Your name is: ${res}`);
+  }
+});
 
-process.stdin.setEncoding('utf8');
-
-const res = read.createInterface({
-  input: process.stdin,
-  output: process.stdout,
+process.stdin.on('end', () => {
+  console.log('This important software is now closing');
 });
 
 console.log('Welcome to Holberton School, what is your name?');
-res.on('line', (input) => {
-  if (input) {
-    process.stdout.write(`Your name is: ${input}\n`);
-  }
-  res.close();
-});
-res.on('close', () => {
-  if (!(process.stdin.isTTY)) {
-    console.log('This important software is now closing');
-  }
-});
