@@ -1,3 +1,5 @@
+process.stdin.setEncoding('utf-8');
+
 process.stdin.on('readable', () => {
   const name = process.stdin.read();
   if (name !== null) {
