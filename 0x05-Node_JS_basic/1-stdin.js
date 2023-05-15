@@ -14,6 +14,7 @@ res.on('line', (input) => {
   res.close();
 });
 res.on('close', () => {
-  console.log('This important software is now closing');
-  process.exit();
+  if (!(process.stdin.isTTY)) {
+    console.log('This important software is now closing');
+  }
 });
