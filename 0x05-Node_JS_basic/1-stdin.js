@@ -1,3 +1,4 @@
+// simple node scripts that read and prints
 const read = require('readline');
 
 const res = read.createInterface({
