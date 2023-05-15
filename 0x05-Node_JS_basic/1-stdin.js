@@ -7,14 +7,11 @@ const res = read.createInterface({
   output: process.stdout,
 });
 
-function ask(question) {
-  res.question(question, (answer) => {
-    res.write(`Your name is: ${answer}\n`);
-    res.on('close', () => {
-      console.log('This important software is now closing');
-      process.exit(0);
-    });
-  });
-}
-
-ask('Welcome to Holberton School, what is your name?\n');
+console.log('Welcome to Holberton School, what is your name?');
+res.on('line', (input) => {
+  console.log(`Your name is: ${input}`);
+  res.close();
+}).on('close', () => {
+  console.log('This important software is now closing');
+  process.exit(0);
+});
