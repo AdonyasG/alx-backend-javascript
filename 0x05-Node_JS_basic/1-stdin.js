@@ -8,7 +8,9 @@ const res = read.createInterface({
 
 console.log('Welcome to Holberton School, what is your name?');
 res.on('line', (input) => {
-  console.log(`Your name is: ${input}`);
+  if (input) {
+    console.log(`Your name is: ${input}`);
+  }
   res.close();
 });
 res.on('close', () => {
