@@ -13,8 +13,7 @@ app.get('/students', (req, res) => {
       res.send(`This is the list of our students\n${data}`);
     })
     .catch((error) => {
-      res.send('This is the list of our students\n');
-      res.send(error.message);
+      res.send(`This is the list of our students\n${error.message}`);
     });
 });
 
