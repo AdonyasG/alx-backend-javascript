@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint",
     "check-lint": "lint [0-9]*.js",
-    "test": "./node_modules/mocha/bin/_mocha *.test.js || exit 0"
+    "test": "./node_modules/mocha/bin/_mocha *.test.js --recursive --timeout 0 --exit"
   },
   "author": "AdonyasG",
   "license": "ISC",
