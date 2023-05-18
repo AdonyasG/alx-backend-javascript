@@ -23,7 +23,7 @@ describe('Testing numbers', () => {
 
   it('5 is equal to 5', () => {
     expect(5 === 5).to.be.true;
-  });s
+  });
 
   it('6 is equal to 6', () => {
     expect(6 === 6).to.be.true;
