@@ -1,9 +1,9 @@
 const { expect } = require('chai');
-const getPaymentToken = require('./6-payment_token');
+const getPaymentTokenFromAPI = require('./6-payment_token');
 
 describe('getPaymentTokenFromAPI', () => {
   it('getPaymentToken', (done) => {
-    getPaymentToken(true)
+    getPaymentTokenFromAPI(true)
       .then((res) => {
         expect(res).to.eql({ data: 'Successful response from the API' });
         done();
