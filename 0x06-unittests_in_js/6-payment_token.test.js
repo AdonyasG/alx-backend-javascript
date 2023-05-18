@@ -7,9 +7,6 @@ describe('getPaymentTokenFromAPI', () => {
       .then((res) => {
         expect(res).to.deep.eql({ data: 'Successful response from the API' });
         done();
-      })
-      .catch((err) => {
-        done(err);
       });
   });
 });
