@@ -41,7 +41,7 @@ describe('integration test', () => {
       },
     }, (error, response, body) => {
       expect(response.statusCode).to.equal(200);
-      expect(body).to.equal('Welcome chappi');
+      expect(body).to.equal('Welcome Chappi');
       done();
     });
   });
