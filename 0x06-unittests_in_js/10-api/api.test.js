@@ -33,16 +33,19 @@ describe('integration test', () => {
     });
   });
 
-  it('endpoint: POST /login', (done) => {
-    request.post({
-      url: 'http://localhost:7865/login',
-      form: {
-        userName: 'Chappi',
+  it('should return a welcome message with the provided username', (done) => {
+    const userName = 'Chappi';
+
+    request.post(
+      'http://localhost:7865/login',
+      {
+        json: { userName },
       },
-    }, (error, response, body) => {
-      expect(response.statusCode).to.equal(200);
-      expect(body).to.equal('Welcome Chappi');
-      done();
-    });
+      (error, response, body) => {
+        expect(response.statusCode).to.equal(200);
+        expect(body).to.equal(`Welcome ${userName}`);
+        done();
+      },
+    );
   });
 });
