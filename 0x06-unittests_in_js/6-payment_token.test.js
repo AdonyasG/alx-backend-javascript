@@ -11,14 +11,4 @@ describe('getPaymentTokenFromAPI', () => {
         done(err);
       });
   });
-
-  it('getPaymentToken', (done) => {
-    getPaymentTokenFromAPI(false)
-      .then((res) => {
-        done('Should not resolve');
-      }).catch((err) => {
-        expect(err).to.equal('Cannot connect');
-        done();
-      });
-  });
 });
